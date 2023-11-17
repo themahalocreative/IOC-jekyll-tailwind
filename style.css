@@ -9,6 +9,10 @@
 
 /* Custom CSS */
 
+*{
+  border-color: initial;
+}
+
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
 }
@@ -37,11 +41,15 @@ h4 {
   text-transform: uppercase;
 }
 .button {
-  background-color: black;
   padding: 0.5rem 1.5rem;
-  color: white;
   text-transform: uppercase;
   display: inline-block;
+  @apply bg-black text-white border dark:bg-white dark:text-black;
+
+}
+.button:hover {
+  transition: all 0.2s;
+  @apply bg-white text-black border-black dark:bg-black dark:text-white dark:border-white;
 }
 
 .rotate-text-180 {
@@ -62,7 +70,7 @@ footer a {
 }
 footer h4 {
   font-weight: 800;
-  @apply mb-2
+  @apply mb-2;
 }
 /* form */
 label, input, button, textarea {
@@ -74,4 +82,19 @@ label {
 input, textarea {
   margin-bottom: 1rem;
   color: black;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+input::placeholder {
+  @apply dark:text-white;
+}
+input::placeholder, textarea::placeholder {
+  @apply text-black dark:text-white;
+}
+input {
+  @apply dark:bg-transparent;
+}
+textarea {
+  @apply dark:border dark:border-white dark:bg-transparent;
 }
