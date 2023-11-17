@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Tailwind stylesheet (selects only the classes that you use)-->
-    <!-- ONLY WORKS ONLINE DL FULL OFFLINE VERSION SPEAK TO IOC? -->
-    <link href="/assets/css/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    {% include site-head.html %}
 </head>
 <body>
-    <header>
-        
-    </header>
+    {% include body-header.html %}
     {{content}}
-    <footer>
-
-    </footer>
+    {% include body-footer.html %}
 </body>
 </html>

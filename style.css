@@ -33,7 +33,8 @@ h2 span {
 }
 h4 {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 .button {
   background-color: black;
@@ -47,6 +48,21 @@ h4 {
   writing-mode: vertical-lr;
   text-orientation: mixed;
   @apply rotate-180;
+}
+/* header footer */
+header a {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+footer a {
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  margin-right:0.4rem;
+  display: block;
+}
+footer h4 {
+  font-weight: 800;
+  @apply mb-2
 }
 /* form */
 label, input, button, textarea {

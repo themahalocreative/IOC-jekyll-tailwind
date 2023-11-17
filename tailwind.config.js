@@ -42,6 +42,8 @@ module.exports = {
         '20p': '20%',
         '30p': '30%',
         '75p': '75%',
+        '80p': '80%',
+        '90p': '90%',
         '100p': '100%',
       },
       aspectRatio: {
@@ -51,6 +53,7 @@ module.exports = {
         '50': '50%',
         '75': '75%',
         '80': '80%',
+        '90': '90%',
       },
       minHeight:{
         '100': '100vh',
@@ -60,8 +63,12 @@ module.exports = {
         '60': '60vh',
         '50': '50vh',
       },
+      lineHieght:{
+        'sm': '0.8rem',
+      },
       aspectRatio: {
         'landscape': '3 / 2',
+        'landscapewide': '5 / 2',
         'portrait-tall': '5/8',
         'portrait': '4/5',
       },
