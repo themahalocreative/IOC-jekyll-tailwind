@@ -107,14 +107,18 @@ facts:
 </section>
 <!-- column rotate -->
 <section>
-    <div class="max-w-screen-xl mx-auto sm:flex p-10 pt-0">
-        <div class="sm:flex text-left">
-            <h2 class="sm:rotate-text-180 mb-5 sm:mb-0">Gallery</h2>
+    <div class="max-w-screen-xl mx-auto grid sm:grid-cols-[2.5rem,1fr] justify-between p-10 pt-0">
+        <!-- fr 1 fraction of remaining space -->
+        <div class=" text-left">
+            <h2 class="sm:rotate-text-180 mb-5 sm:mb-0 sm:text-[3.8rem] text-[2.5rem]">Gallery</h2>
         </div>
-        <div class="sm:p-5 sm:pl-10 pb-0">
+        <div class="sm:pr-5 sm:pl-10 pb-0 flex flex-col justify-between">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, rem! Facere commodi molestias et tempore blanditiis. Sit, ipsa iste illum nemo in maiores amet consequatur magni qui nostrum ullam praesentium.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa excepturi ratione ab repellat quos iste iure laboriosam dolorum. Illo natus dignissimos nam eos, accusantium unde delectus fugit obcaecati rem vitae.</p>
-            <a href="" class="button dark:dark-button">Sign Up</a>
+            <div>
+                <a href="" class="button dark:dark-button">Sign Up</a>
+            </div>
+            
         </div>
     </div>
 </section>

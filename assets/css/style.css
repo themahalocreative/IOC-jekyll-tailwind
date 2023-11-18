@@ -656,8 +656,17 @@ input::placeholder, textarea::placeholder {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-\[5rem\2c 1fr\] {
+  grid-template-columns: 5rem 1fr;
+}
 .flex-row {
   flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
 }
 .flex-nowrap {
   flex-wrap: nowrap;
@@ -764,6 +773,31 @@ input::placeholder, textarea::placeholder {
   font-size: 1.875rem;
   line-height: 1;
 }
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-\[5rem\] {
+  font-size: 5rem;
+}
+.text-\[3rem\] {
+  font-size: 3rem;
+}
+.text-\[4rem\] {
+  font-size: 4rem;
+}
+.text-\[3\.5rem\] {
+  font-size: 3.5rem;
+}
+.text-\[3\.8rem\] {
+  font-size: 3.8rem;
+}
+.text-\[1\.5rem\] {
+  font-size: 1.5rem;
+}
+.text-\[2\.5rem\] {
+  font-size: 2.5rem;
+}
 .font-black {
   font-weight: 900;
 }
@@ -838,6 +872,17 @@ anything you want to override or is general as a base, next level component, spe
   .xs\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .xs\:text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
+  .xs\:text-\[3\.8rem\] {
+    font-size: 3.8rem;
+  }
+  @media (min-width: 640px) {
+    .xs\:sm\:mb-0 {
+      margin-bottom: 0px;
+    }
+  }
 }
 @media (min-width: 640px) {
   .sm\:mb-0 {
@@ -864,6 +909,18 @@ anything you want to override or is general as a base, next level component, spe
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .sm\:grid-cols-\[5rem\2c 1fr\] {
+    grid-template-columns: 5rem 1fr;
+  }
+  .sm\:grid-cols-\[3rem\2c 1fr\] {
+    grid-template-columns: 3rem 1fr;
+  }
+  .sm\:grid-cols-\[2rem\2c 1fr\] {
+    grid-template-columns: 2rem 1fr;
+  }
+  .sm\:grid-cols-\[2\.5rem\2c 1fr\] {
+    grid-template-columns: 2.5rem 1fr;
+  }
   .sm\:justify-between {
     justify-content: space-between;
   }
@@ -876,8 +933,17 @@ anything you want to override or is general as a base, next level component, spe
   .sm\:pl-10 {
     padding-left: 2.5rem;
   }
+  .sm\:pr-5 {
+    padding-right: 1.25rem;
+  }
   .sm\:text-left {
     text-align: left;
+  }
+  .sm\:text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
+  .sm\:text-\[3\.8rem\] {
+    font-size: 3.8rem;
   }
   .sm\:rotate-text-180 {
     writing-mode: vertical-lr;
@@ -895,6 +961,9 @@ anything you want to override or is general as a base, next level component, spe
   }
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:grid-cols-\[5rem\2c 1fr\] {
+    grid-template-columns: 5rem 1fr;
   }
   .md\:pl-\[15\%\] {
     padding-left: 15%;
