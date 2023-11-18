@@ -312,6 +312,105 @@ video {
 [hidden] {
   display: none;
 }
+p { margin-bottom: 1rem;}
+h1, h2, h3, h4 {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+p, a {
+    font-family: 'Roboto', sans-serif;
+  }
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 0.9;
+  }
+h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 0.9;
+  }
+h2 span {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: none;
+    line-height: 0.8;
+  }
+h4 {
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+/* header footer */
+header a {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+footer a {
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    margin-right:0.4rem;
+    display: block;
+    font-size: 0.9rem;
+  }
+footer h4 {
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+/* form */
+label, input, button, textarea {
+    display: block;
+  }
+label {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+input, textarea {
+    margin-bottom: 1rem;
+    color: black;
+  }
+input:focus, textarea:focus {
+    outline: none;
+  }
+@media (prefers-color-scheme: dark) {
+  input::-moz-placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  input::placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+input::placeholder, textarea::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+@media (prefers-color-scheme: dark) {
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  input::placeholder, textarea::placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  input {
+    background-color: transparent;
+  }
+  textarea {
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    background-color: transparent;
+  }
+}
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -407,6 +506,11 @@ video {
 .container {
   width: 100%;
 }
+@media (min-width: 380px) {
+  .container {
+    max-width: 380px;
+  }
+}
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -430,6 +534,44 @@ video {
 @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
+  }
+}
+.button {
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border-width: 1px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+
+  }
+@media (prefers-color-scheme: dark) {
+  .button {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+}
+.button:hover {
+    transition: all 0.2s;
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+@media (prefers-color-scheme: dark) {
+  .button:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 .absolute {
@@ -502,9 +644,6 @@ video {
 .max-w-screen-xl {
   max-width: 1280px;
 }
-.max-w-90 {
-  max-width: 90%;
-}
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -513,9 +652,6 @@ video {
 }
 .basis-\[60\%\] {
   flex-basis: 60%;
-}
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -534,6 +670,9 @@ video {
 }
 .justify-end {
   justify-content: flex-end;
+}
+.justify-between {
+  justify-content: space-between;
 }
 .gap-2 {
   gap: 0.5rem;
@@ -562,10 +701,6 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -573,8 +708,11 @@ video {
 .p-10 {
   padding: 2.5rem;
 }
-.p-5 {
-  padding: 1.25rem;
+.pb-8 {
+  padding-bottom: 2rem;
+}
+.pt-8 {
+  padding-top: 2rem;
 }
 .pl-0 {
   padding-left: 0px;
@@ -609,9 +747,6 @@ video {
 .pl-20p {
   padding-left: 20%;
 }
-.pb-8 {
-  padding-bottom: 2rem;
-}
 .text-left {
   text-align: left;
 }
@@ -638,13 +773,19 @@ video {
 .uppercase {
   text-transform: uppercase;
 }
+.normal-case {
+  text-transform: none;
+}
 .leading-\[2\.5rem\] {
   line-height: 2.5rem;
 }
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
+.rotate-text-180 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    --tw-rotate: 180deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+/* can add more utilities */
 
 /* Custom CSS */
 
@@ -655,141 +796,28 @@ video {
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
 }
-p { margin-bottom: 1rem;}
-h1 {
-  font-weight: 800;
-  font-size: 3rem;
-  text-transform: uppercase;
-  line-height: 0.9;
+/* SCROLL BAR ---------------------- */
+:root /* Mozilla Firefox */{
+  scrollbar-color: blacks #bebbac !important;
+  scrollbar-width: thin !important;
 }
-h2 {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 2rem;
-  line-height: 0.9;
+:root:hover { scrollbar-color: black #bebbac !important;}
+/* Chrome */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
 }
-h2 span {
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: none;
-  line-height: 0.8;
-}
-h4 {
-  font-weight: 400;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-.button {
-  padding: 0.5rem 1.5rem;
-  text-transform: uppercase;
-  display: inline-block;
-  border-width: 1px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+/* Track */
+::-webkit-scrollbar-track { background: #bebbac;}
+/* Handle */
+::-webkit-scrollbar-thumb { background: black;}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover { background: #bebbac;}
 
-}
+/* HOW TO DECIDE - order in level of specifity
+anything you want to override or is general as a base, next level component, specific class is a utility you don't want to change */
 @media (prefers-color-scheme: dark) {
-  .button {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
-  }
-}
-.button:hover {
-  transition: all 0.2s;
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-@media (prefers-color-scheme: dark) {
-  .button:hover {
-    --tw-border-opacity: 1;
-    border-color: rgb(255 255 255 / var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-}
-
-.rotate-text-180 {
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-/* header footer */
-header a {
-  padding: 0.5rem 1rem;
-  text-transform: uppercase;
-}
-footer a {
-  text-transform: uppercase;
-  margin-bottom: 0.2rem;
-  margin-right:0.4rem;
-  display: block;
-}
-footer h4 {
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-/* form */
-label, input, button, textarea {
-  display: block;
-}
-label {
-  font-weight: 900;
-  text-transform: uppercase;
-}
-input, textarea {
-  margin-bottom: 1rem;
-  color: black;
-}
-input:focus, textarea:focus {
-  outline: none;
-}
-@media (prefers-color-scheme: dark) {
-  input::-moz-placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-  input::placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-}
-input::-moz-placeholder, textarea::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-input::placeholder, textarea::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-@media (prefers-color-scheme: dark) {
-  input::-moz-placeholder, textarea::-moz-placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-  input::placeholder, textarea::placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-  input {
-    background-color: transparent;
-  }
-  textarea {
-    border-width: 1px;
-    --tw-border-opacity: 1;
-    border-color: rgb(255 255 255 / var(--tw-border-opacity));
-    background-color: transparent;
-  }
   .dark\:border-white {
     --tw-border-opacity: 1;
     border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -801,6 +829,14 @@ input::placeholder, textarea::placeholder {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+@media (min-width: 380px) {
+  .xs\:grid {
+    display: grid;
+  }
+  .xs\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 640px) {
@@ -831,11 +867,23 @@ input::placeholder, textarea::placeholder {
   .sm\:justify-between {
     justify-content: space-between;
   }
+  .sm\:p-5 {
+    padding: 1.25rem;
+  }
   .sm\:pr-20 {
     padding-right: 5rem;
   }
+  .sm\:pl-10 {
+    padding-left: 2.5rem;
+  }
   .sm\:text-left {
     text-align: left;
+  }
+  .sm\:rotate-text-180 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    --tw-rotate: 180deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 @media (min-width: 768px) {
@@ -855,3 +903,4 @@ input::placeholder, textarea::placeholder {
     text-align: right;
   }
 }
+

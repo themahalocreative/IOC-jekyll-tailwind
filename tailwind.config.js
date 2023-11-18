@@ -72,6 +72,11 @@ module.exports = {
         'portrait-tall': '5/8',
         'portrait': '4/5',
       },
+      
+      screens: {
+        'xs': '380px',
+        // => @media (min-width: 640px) { ... }
+      },
     },
   },
   plugins: [
